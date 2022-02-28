@@ -14,17 +14,17 @@ namespace Catalog.Controllers
         }
 
         [HttpGet]
-        public ActionResult<Item> GetItems()
+        public ActionResult<ItemDto> GetItems()
         {
-            return Ok(_repo.GetItems());
+            return Ok(_repo.GetItems().Select(c=>c.AsDto()));
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Item> GetItem(Guid id){
+        public ActionResult<ItemDto> GetItem(Guid id){
             var result=_repo.getItem(id);
             if(result is null)
                 return NotFound();
-            return Ok(result);
+            return Ok(result.AsDto());
         }
     }
 }

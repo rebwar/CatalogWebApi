@@ -1,4 +1,5 @@
 global using Catalog.Entities;
+global using Catalog.Dtos;
 using Catalog.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
