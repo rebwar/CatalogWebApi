@@ -1,26 +1,31 @@
 using Catalog.Entities;
 namespace Catalog.Repositories
 {
-    public class InMemItemRepository
+
+    public class InMemItemRepository : IItemRepository
     {
-        private readonly List<Item> items=new(){
-            new Item{
-                Id=Guid.NewGuid(),
-                Name="Potion",
-                Price=9,
-                CreatedDate=DateTimeOffset.UtcNow
+        private readonly List<Item> items = new()
+        {
+            new Item
+            {
+                Id = Guid.NewGuid(),
+                Name = "Potion",
+                Price = 9,
+                CreatedDate = DateTimeOffset.UtcNow
             },
-            new Item{
-                Id=Guid.NewGuid(),
-                Name="Iron Sword",
-                Price=20,
-                CreatedDate=DateTimeOffset.UtcNow
+            new Item
+            {
+                Id = Guid.NewGuid(),
+                Name = "Iron Sword",
+                Price = 20,
+                CreatedDate = DateTimeOffset.UtcNow
             },
-            new Item{
-                Id=Guid.NewGuid(),
-                Name="Bronze Sheild",
-                Price=17,
-                CreatedDate=DateTimeOffset.UtcNow
+            new Item
+            {
+                Id = Guid.NewGuid(),
+                Name = "Bronze Sheild",
+                Price = 17,
+                CreatedDate = DateTimeOffset.UtcNow
             }
 
         };
@@ -32,7 +37,7 @@ namespace Catalog.Repositories
 
         public Item getItem(Guid id)
         {
-            var result=items.Where(c=>c.Id==id).SingleOrDefault();
+            var result = items.Where(c => c.Id == id).SingleOrDefault();
             return result;
         }
     }
