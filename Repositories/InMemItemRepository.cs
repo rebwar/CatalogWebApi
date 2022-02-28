@@ -29,5 +29,11 @@ namespace Catalog.Repositories
         {
             return items;
         }
+
+        public Item getItem(Guid id)
+        {
+            var result=items.Where(c=>c.Id==id).SingleOrDefault();
+            return result;
+        }
     }
 }

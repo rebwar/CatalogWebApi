@@ -16,7 +16,15 @@ namespace Catalog.Controllers
         [HttpGet]
         public ActionResult<Item> GetItems()
         {
-            return Ok(repo.)
+            return Ok(repo.GetItems());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Item> GetItem(Guid id){
+            var result=repo.getItem(id);
+            if(result is null)
+                return NotFound();
+            return Ok(result);
         }
     }
 }
