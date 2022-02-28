@@ -24,5 +24,10 @@ namespace Catalog.Repositories
             }
 
         };
+
+        public IEnumerable<Item> GetItems()
+        {
+            return items;
+        }
     }
 }

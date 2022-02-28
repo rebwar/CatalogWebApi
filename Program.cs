@@ -1,3 +1,4 @@
+global using Catalog.Entities;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
