@@ -1,0 +1,7 @@
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.csproj.AssemblyReference.cache
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.AssemblyInfoInputs.cache
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.AssemblyInfo.cs
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.csproj.CoreCompileInputs.cache
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rebwa\Desktop\Projects\Catalog\obj\Debug\net6.0\Catalog.MvcApplicationPartsAssemblyInfo.cache
