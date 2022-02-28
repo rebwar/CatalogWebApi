@@ -6,22 +6,22 @@ namespace Catalog.Controllers
     [Route("api/[controller]")]
     public class ItemController : ControllerBase
     {
-        private readonly InMemItemRepository repo;
-        public ItemController()
+        private readonly IItemRepository _repo;
+        public ItemController(IItemRepository repo)
         {
            
-            repo = new InMemItemRepository();
+            _repo = repo;
         }
 
         [HttpGet]
         public ActionResult<Item> GetItems()
         {
-            return Ok(repo.GetItems());
+            return Ok(_repo.GetItems());
         }
 
         [HttpGet("{id}")]
         public ActionResult<Item> GetItem(Guid id){
-            var result=repo.getItem(id);
+            var result=_repo.getItem(id);
             if(result is null)
                 return NotFound();
             return Ok(result);
