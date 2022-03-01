@@ -9,20 +9,21 @@ namespace Catalog.Controllers
         private readonly IItemRepository _repo;
         public ItemController(IItemRepository repo)
         {
-           
+
             _repo = repo;
         }
 
         [HttpGet]
         public ActionResult<ItemDto> GetItems()
         {
-            return Ok(_repo.GetItems().Select(c=>c.AsDto()));
+            return Ok(_repo.GetItems().Select(c => c.AsDto()));
         }
 
         [HttpGet("{id}")]
-        public ActionResult<ItemDto> GetItem(Guid id){
-            var result=_repo.getItem(id);
-            if(result is null)
+        public ActionResult<ItemDto> GetItem(Guid id)
+        {
+            var result = _repo.getItem(id);
+            if (result is null)
                 return NotFound();
             return Ok(result.AsDto());
         }

@@ -4,5 +4,7 @@ namespace Catalog.Repositories
     {
         Item getItem(Guid id);
         IEnumerable<Item> GetItems();
+
+        void CreateItem();
     }
 }
