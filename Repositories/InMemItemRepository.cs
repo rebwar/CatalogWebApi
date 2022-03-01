@@ -40,5 +40,16 @@ namespace Catalog.Repositories
             var result = items.Where(c => c.Id == id).SingleOrDefault();
             return result;
         }
+
+        public void CreateItem(Item item)
+        {
+            items.Add(item);
+        }
+
+        public void UpdateItem(Item item)
+        {
+            var index = items.FindIndex(x => x.Id == item.Id);
+            items[index] = item;
+        }
     }
 }
